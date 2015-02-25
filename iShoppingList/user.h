@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-@interface user : NSObject
+@interface user : NSObject{
+    @private
+    NSString* firstName_;
+    NSString* lastName_;
+    NSString* email_;
+    NSString* token_;
+}
+
+@property (nonatomic, strong) NSString* firstName;
+@property (nonatomic, strong) NSString* lastName;
+@property (nonatomic, strong) NSString* email;
+@property (nonatomic, strong) NSString* token;
+
+-(id)initWithFirstName:(NSString*)f lastName:(NSString*)l email:(NSString*)e token:(NSString*)t;
 
 @end
