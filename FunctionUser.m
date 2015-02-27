@@ -7,7 +7,7 @@
 //
 
 #import "FunctionUser.h"
-
+#import "User.h"
 @interface FunctionUser ()
 
 @end
@@ -28,9 +28,7 @@
     
     NSString* urlSubscribe = @"http://appspaces.fr/esgi/shopping_list/account/subscribe.php";
     
-    NSString* urlData = [NSString stringWithFormat:@"?email=%@&password=%@&firstname=%@&lastname=%@", [User email], password, [User fisrtName], [User lastName]];
-    
-    
+    NSString* urlData = [NSString stringWithFormat:@"?email=%@&password=%@&firstname=%@&lastname=%@", [user email], password, [user firstName], [user lastName]];
     
     NSMutableString* urlString = [[NSMutableString alloc] initWithFormat:@"%@%@", urlSubscribe, urlData];
     
@@ -46,16 +44,10 @@
     NSMutableDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
     if (!error)
-        
     {
         
-        
-        
         if ([[jsonDict objectForKey:@"code"] isEqualToString:@"0"])
-            
         {
-            
-            
             
             NSLog(@"La session a été crée avec succès.");
             
@@ -63,21 +55,13 @@
             
             return user;
             
-            
-            
         }
-        
-        
-        
         else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"2"])
-            
         {
             
             NSLog(@"Le compte existe déja.");
             
         }
-        
-        
         
     }
     
