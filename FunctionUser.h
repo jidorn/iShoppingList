@@ -10,6 +10,7 @@
 #import "User.h"
 @interface FunctionUser : UIViewController
 
-+ (User*) subscribeWithUser: (User*) user andPassword: (NSString*) password;
++ (User*) subscribeWithEmail: (NSString*) email andLastName: (NSString*) lastName andFirstName: (NSString*) andPassword: (NSString*) password;
++ (User*) loginWithEmail: (NSString*) email andPassword: (NSString*) password;
 
 @end
