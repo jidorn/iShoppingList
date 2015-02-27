@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72D1D4F21A9FCB02009E937D /* RestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D1D4F01A9FCB02009E937D /* RestViewController.m */; };
+		72D1D4F31A9FCB02009E937D /* RestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72D1D4F11A9FCB02009E937D /* RestViewController.xib */; };
+		72D1D4F91A9FCD48009E937D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D1D4F81A9FCD48009E937D /* User.m */; };
+		EC0678B61A9F2FC9008A9A01 /* ShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0678B51A9F2FC9008A9A01 /* ShoppingList.m */; };
 		EC31FCA91A9DD93B00E33939 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC31FCA81A9DD93B00E33939 /* Foundation.framework */; };
 		EC31FCAB1A9DD93B00E33939 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC31FCAA1A9DD93B00E33939 /* CoreGraphics.framework */; };
 		EC31FCAD1A9DD93B00E33939 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC31FCAC1A9DD93B00E33939 /* UIKit.framework */; };
 		EC31FCB31A9DD93C00E33939 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC31FCB11A9DD93C00E33939 /* InfoPlist.strings */; };
 		EC31FCB51A9DD93C00E33939 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC31FCB41A9DD93C00E33939 /* main.m */; };
 		EC31FCB91A9DD93C00E33939 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC31FCB81A9DD93C00E33939 /* AppDelegate.m */; };
-		EC31FCBC1A9DD93C00E33939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC31FCBA1A9DD93C00E33939 /* Main.storyboard */; };
 		EC31FCBF1A9DD93C00E33939 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC31FCBE1A9DD93C00E33939 /* ViewController.m */; };
 		EC31FCC11A9DD93C00E33939 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC31FCC01A9DD93C00E33939 /* Images.xcassets */; };
 		EC31FCC81A9DD93C00E33939 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC31FCC71A9DD93C00E33939 /* XCTest.framework */; };
@@ -21,6 +24,7 @@
 		EC31FCCA1A9DD93C00E33939 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC31FCAC1A9DD93B00E33939 /* UIKit.framework */; };
 		EC31FCD21A9DD93C00E33939 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC31FCD01A9DD93C00E33939 /* InfoPlist.strings */; };
 		EC31FCD41A9DD93C00E33939 /* iShoppingListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC31FCD31A9DD93C00E33939 /* iShoppingListTests.m */; };
+		ECD10E6D1AA087BC007F7CD3 /* test in Resources */ = {isa = PBXBuildFile; fileRef = ECD10E6C1AA087BC007F7CD3 /* test */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72D1D4EF1A9FCB02009E937D /* RestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestViewController.h; sourceTree = "<group>"; };
+		72D1D4F01A9FCB02009E937D /* RestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestViewController.m; sourceTree = "<group>"; };
+		72D1D4F11A9FCB02009E937D /* RestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestViewController.xib; sourceTree = "<group>"; };
+		72D1D4F71A9FCD48009E937D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
+		72D1D4F81A9FCD48009E937D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		EC0678B41A9F2FC9008A9A01 /* ShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingList.h; sourceTree = "<group>"; };
+		EC0678B51A9F2FC9008A9A01 /* ShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingList.m; sourceTree = "<group>"; };
 		EC31FCA51A9DD93B00E33939 /* iShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC31FCA81A9DD93B00E33939 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EC31FCAA1A9DD93B00E33939 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -44,7 +55,6 @@
 		EC31FCB61A9DD93C00E33939 /* iShoppingList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iShoppingList-Prefix.pch"; sourceTree = "<group>"; };
 		EC31FCB71A9DD93C00E33939 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC31FCB81A9DD93C00E33939 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EC31FCBB1A9DD93C00E33939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC31FCBD1A9DD93C00E33939 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EC31FCBE1A9DD93C00E33939 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC31FCC01A9DD93C00E33939 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +63,7 @@
 		EC31FCCF1A9DD93C00E33939 /* iShoppingListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iShoppingListTests-Info.plist"; sourceTree = "<group>"; };
 		EC31FCD11A9DD93C00E33939 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC31FCD31A9DD93C00E33939 /* iShoppingListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iShoppingListTests.m; sourceTree = "<group>"; };
+		ECD10E6C1AA087BC007F7CD3 /* test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +123,20 @@
 		EC31FCAE1A9DD93C00E33939 /* iShoppingList */ = {
 			isa = PBXGroup;
 			children = (
-				EC31FCB71A9DD93C00E33939 /* AppDelegate.h */,
 				EC31FCB81A9DD93C00E33939 /* AppDelegate.m */,
-				EC31FCBA1A9DD93C00E33939 /* Main.storyboard */,
+				EC31FCB71A9DD93C00E33939 /* AppDelegate.h */,
+				EC0678B41A9F2FC9008A9A01 /* ShoppingList.h */,
+				EC0678B51A9F2FC9008A9A01 /* ShoppingList.m */,
 				EC31FCBD1A9DD93C00E33939 /* ViewController.h */,
 				EC31FCBE1A9DD93C00E33939 /* ViewController.m */,
+				72D1D4F71A9FCD48009E937D /* User.h */,
+				72D1D4F81A9FCD48009E937D /* User.m */,
+				72D1D4EF1A9FCB02009E937D /* RestViewController.h */,
+				72D1D4F01A9FCB02009E937D /* RestViewController.m */,
+				72D1D4F11A9FCB02009E937D /* RestViewController.xib */,
 				EC31FCC01A9DD93C00E33939 /* Images.xcassets */,
 				EC31FCAF1A9DD93C00E33939 /* Supporting Files */,
+				ECD10E6C1AA087BC007F7CD3 /* test */,
 			);
 			path = iShoppingList;
 			sourceTree = "<group>";
@@ -228,9 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD10E6D1AA087BC007F7CD3 /* test in Resources */,
+				72D1D4F31A9FCB02009E937D /* RestViewController.xib in Resources */,
 				EC31FCC11A9DD93C00E33939 /* Images.xcassets in Resources */,
 				EC31FCB31A9DD93C00E33939 /* InfoPlist.strings in Resources */,
-				EC31FCBC1A9DD93C00E33939 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +270,10 @@
 			files = (
 				EC31FCBF1A9DD93C00E33939 /* ViewController.m in Sources */,
 				EC31FCB91A9DD93C00E33939 /* AppDelegate.m in Sources */,
+				72D1D4F91A9FCD48009E937D /* User.m in Sources */,
 				EC31FCB51A9DD93C00E33939 /* main.m in Sources */,
+				72D1D4F21A9FCB02009E937D /* RestViewController.m in Sources */,
+				EC0678B61A9F2FC9008A9A01 /* ShoppingList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,14 +302,6 @@
 				EC31FCB21A9DD93C00E33939 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		EC31FCBA1A9DD93C00E33939 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC31FCBB1A9DD93C00E33939 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		EC31FCD01A9DD93C00E33939 /* InfoPlist.strings */ = {
@@ -464,6 +478,7 @@
 				EC31FCD91A9DD93C00E33939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC31FCDA1A9DD93C00E33939 /* Build configuration list for PBXNativeTarget "iShoppingListTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +487,7 @@
 				EC31FCDC1A9DD93C00E33939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

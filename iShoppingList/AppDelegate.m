@@ -7,11 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "RestViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    window.rootViewController = [RestViewController new];
+    [window makeKeyAndVisible];
+    self.window = window;
     // Override point for customization after application launch.
     return YES;
 }
