@@ -17,4 +17,6 @@
 
 +(BOOL) editShoppingLIstWithToken:(NSString*)tokenUser andShoppingListId:(NSInteger*)idList andShoppingListName:(NSString*)ShoppingListName andCompletedShoppingList:(BOOL)completedList;
 
++(void) removeShoppingListWithToken:(NSString*)tokenUser andShoppingListId:(NSInteger*)idList;
+
 @end

@@ -10,9 +10,10 @@
 #import "Product.h"
 #import "User.h"
 
-@interface ProductWebServiceV : UIViewController
+@interface ProductWebService : UIViewController
 
 +(Product*)createProduct:(NSString*)tokenUser andIdShoppingList:(NSInteger*)IdShop andNameProduct:(NSString*)name andQuantity:(NSInteger*)quantity andPrice:(double)price;
-+(ShoppingList<Product*>)
+
++(NSArray*)ListOfProductWithToken:(NSString*)tokenUser andShoppingListId:(NSInteger*)idList;
 
 @end

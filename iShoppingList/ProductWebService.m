@@ -12,7 +12,7 @@
 
 @end
 
-@implementation ProductWebServiceViewController
+@implementation ProductWebService
 
 - (void)viewDidLoad {
     [super viewDidLoad];
