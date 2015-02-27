@@ -25,6 +25,7 @@
 		EC31FCD21A9DD93C00E33939 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC31FCD01A9DD93C00E33939 /* InfoPlist.strings */; };
 		EC31FCD41A9DD93C00E33939 /* iShoppingListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC31FCD31A9DD93C00E33939 /* iShoppingListTests.m */; };
 		ECD10E6D1AA087BC007F7CD3 /* test in Resources */ = {isa = PBXBuildFile; fileRef = ECD10E6C1AA087BC007F7CD3 /* test */; };
+		ECD10E741AA0A831007F7CD3 /* FunctionUser.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD10E731AA0A831007F7CD3 /* FunctionUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		EC31FCD11A9DD93C00E33939 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC31FCD31A9DD93C00E33939 /* iShoppingListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iShoppingListTests.m; sourceTree = "<group>"; };
 		ECD10E6C1AA087BC007F7CD3 /* test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
+		ECD10E721AA0A831007F7CD3 /* FunctionUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FunctionUser.h; path = ../FunctionUser.h; sourceTree = "<group>"; };
+		ECD10E731AA0A831007F7CD3 /* FunctionUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FunctionUser.m; path = ../FunctionUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 			children = (
 				EC31FCB81A9DD93C00E33939 /* AppDelegate.m */,
 				EC31FCB71A9DD93C00E33939 /* AppDelegate.h */,
+				ECD10E721AA0A831007F7CD3 /* FunctionUser.h */,
+				ECD10E731AA0A831007F7CD3 /* FunctionUser.m */,
 				EC0678B41A9F2FC9008A9A01 /* ShoppingList.h */,
 				EC0678B51A9F2FC9008A9A01 /* ShoppingList.m */,
 				EC31FCBD1A9DD93C00E33939 /* ViewController.h */,
@@ -271,6 +276,7 @@
 				EC31FCBF1A9DD93C00E33939 /* ViewController.m in Sources */,
 				EC31FCB91A9DD93C00E33939 /* AppDelegate.m in Sources */,
 				72D1D4F91A9FCD48009E937D /* User.m in Sources */,
+				ECD10E741AA0A831007F7CD3 /* FunctionUser.m in Sources */,
 				EC31FCB51A9DD93C00E33939 /* main.m in Sources */,
 				72D1D4F21A9FCB02009E937D /* RestViewController.m in Sources */,
 				EC0678B61A9F2FC9008A9A01 /* ShoppingList.m in Sources */,

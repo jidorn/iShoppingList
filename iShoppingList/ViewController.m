@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+    @property NSMutableData * pData;
 @end
 
 @implementation ViewController
