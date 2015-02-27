@@ -11,10 +11,18 @@
 @implementation Product
 
 @synthesize idProduct = idProduct_;
-@synthesize nameProduct = nameProduct_;
-@synthesize quantityProduct = quantityProduct_;
-@synthesize priceProduct = priceProduct_;
+@synthesize name = name_;
+@synthesize quantity = quantity_;
+@synthesize price = price_;
 
-
+-(id)initWithIdProduct:(NSInteger*)i name:(NSString*)n quantity:(NSInteger*)q price:(float)p{
+    if ((self = [super init])) {
+        self.idProduct=i;
+        self.name=n;
+        self.quantity=q;
+        self.price=p;
+    }
+    return self;
+}
 
 @end

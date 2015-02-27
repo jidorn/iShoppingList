@@ -10,13 +10,14 @@
 
 #import "AppDelegate.h"
 #import "User.h"
-#import "FunctionUser.h"
+#import "UserWebService.h"
+#import "ProductWebService.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
 
-        User* user = [FunctionUser subscribeWithEmail:@"test2@gmail.com" andLastName:@"Louis" andFirstName:@"Sebastien" andPassword:@"123"];
+        User* user = [UserWebService subscribeWithEmail:@"test2@gmail.com" andLastName:@"Louis" andFirstName:@"Sebastien" andPassword:@"123"];
         NSLog(@"User : %@", user);
         
         

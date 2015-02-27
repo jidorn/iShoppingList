@@ -13,17 +13,19 @@
 @private
 
 NSInteger* idProduct_;
-NSString* nameProduct_;
-NSInteger* quantityProduct_;
-float priceProduct_;
+NSString* name_;
+NSInteger* quantity_;
+float price_;
 }
 
 @property (nonatomic) NSInteger* idProduct;
 
-@property (nonatomic, strong) NSString* nameProduct;
+@property (nonatomic, strong) NSString* name;
 
-@property (nonatomic) NSInteger* quantityProduct;
+@property (nonatomic) NSInteger* quantity;
 
-@property (nonatomic) float priceProduct;
+@property (nonatomic) float price;
+
+-(id)initWithIdProduct:(NSInteger*)i name:(NSString*)n quantity:(NSInteger*)q price:(float)p;
 
 @end

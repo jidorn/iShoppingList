@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
-@interface FunctionUser : UIViewController
+@interface UserWebService : UIViewController
 
 + (User*) subscribeWithEmail: (NSString*) email andLastName: (NSString*) lastName andFirstName: (NSString*)firstName andPassword: (NSString*) password;
 + (User*) loginWithEmail: (NSString*) email andPassword: (NSString*) password;

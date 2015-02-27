@@ -6,13 +6,15 @@
 //  Copyright (c) 2015 JD. All rights reserved.
 //
 
-#import "FunctionUser.h"
+#import "UserWebService.h"
 #import "User.h"
-@interface FunctionUser ()
+
+
+@interface UserWebService ()
 
 @end
 
-@implementation FunctionUser
+@implementation UserWebService
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -72,7 +74,7 @@
     
 }
 
-+ (User*) loginWithMail: (NSString*) email andPassword: (NSString*) password{
++ (User*) loginWithEmail: (NSString*) email andPassword: (NSString*) password{
     
     NSString* urlSubscribe = @"http://appspaces.fr/esgi/shopping_list/account/subscribe.php";
     
