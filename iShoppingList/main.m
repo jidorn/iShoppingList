@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
+#import "User.h"
+#import "FunctionUser.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+
+        User* user = [FunctionUser subscribeWithEmail:@"test2@gmail.com" andLastName:@"Louis" andFirstName:@"Sebastien" andPassword:@"123"];
+        NSLog(@"User : %@", user);
+        
+        
     }
 }

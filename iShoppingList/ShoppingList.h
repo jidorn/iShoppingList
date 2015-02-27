@@ -19,6 +19,6 @@
 @property (nonatomic) NSInteger* id;
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSDate* date;
-@property (nonatomic, weak) BOOL completed;
+//@property (nonatomic, weak) BOOL completed;
 
 @end

@@ -24,11 +24,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-+ (User*) subscribeWithUser: (User*) user andPassword: (NSString*) password{
++ (User*) subscribeWithEmail: (NSString*) email andLastName: (NSString*) lastName andFirstName: (NSString*)firstName andPassword: (NSString*) password{
     
     NSString* urlSubscribe = @"http://appspaces.fr/esgi/shopping_list/account/subscribe.php";
     
-    NSString* urlData = [NSString stringWithFormat:@"?email=%@&password=%@&firstname=%@&lastname=%@", [user email], password, [user firstName], [user lastName]];
+    NSString* urlData = [NSString stringWithFormat:@"?email=%@&password=%@&firstname=%@&lastname=%@", email, password, firstName, lastName];
     
     NSMutableString* urlString = [[NSMutableString alloc] initWithFormat:@"%@%@", urlSubscribe, urlData];
     
