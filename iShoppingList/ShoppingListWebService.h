@@ -15,6 +15,6 @@
 
 +(NSArray*) ListOfShoppingListWithToken:(NSString*)tokenUser;
 
-+(BOOL) editShoppingLIstWithToken:(NSString*)tokenUser andShoppingListId:(NSInteger*)idList andShoppingListName:(NSString*)ShoppingListName andCompletedShoppingList:(BOOL)completedList
++(BOOL) editShoppingLIstWithToken:(NSString*)tokenUser andShoppingListId:(NSInteger*)idList andShoppingListName:(NSString*)ShoppingListName andCompletedShoppingList:(BOOL)completedList;
 
 @end
