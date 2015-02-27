@@ -29,7 +29,7 @@
 + (User*) subscribeWithEmail: (NSString*) email andLastName: (NSString*) lastName andFirstName: (NSString*)firstName andPassword: (NSString*) password{
     
     NSString* urlSubscribe = @"http://appspaces.fr/esgi/shopping_list/account/subscribe.php";
-    
+     s
     NSString* urlData = [NSString stringWithFormat:@"?email=%@&password=%@&firstname=%@&lastname=%@", email, password, firstName, lastName];
     
     NSMutableString* urlString = [[NSMutableString alloc] initWithFormat:@"%@%@", urlSubscribe, urlData];

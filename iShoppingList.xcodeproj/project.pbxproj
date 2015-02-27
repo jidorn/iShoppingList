@@ -27,7 +27,6 @@
 		EC31FCD21A9DD93C00E33939 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC31FCD01A9DD93C00E33939 /* InfoPlist.strings */; };
 		EC31FCD41A9DD93C00E33939 /* iShoppingListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC31FCD31A9DD93C00E33939 /* iShoppingListTests.m */; };
 		EC4790B51AA0B82B00348DA4 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4790B41AA0B82B00348DA4 /* Product.m */; };
-		ECD10E6D1AA087BC007F7CD3 /* test in Resources */ = {isa = PBXBuildFile; fileRef = ECD10E6C1AA087BC007F7CD3 /* test */; };
 		ECD10E741AA0A831007F7CD3 /* UserWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD10E731AA0A831007F7CD3 /* UserWebService.m */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +72,6 @@
 		EC31FCD31A9DD93C00E33939 /* iShoppingListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iShoppingListTests.m; sourceTree = "<group>"; };
 		EC4790B31AA0B82B00348DA4 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		EC4790B41AA0B82B00348DA4 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
-		ECD10E6C1AA087BC007F7CD3 /* test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
 		ECD10E721AA0A831007F7CD3 /* UserWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserWebService.h; path = ../UserWebService.h; sourceTree = "<group>"; };
 		ECD10E731AA0A831007F7CD3 /* UserWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserWebService.m; path = ../UserWebService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,7 +157,6 @@
 				72D1D4F11A9FCB02009E937D /* RestViewController.xib */,
 				EC31FCC01A9DD93C00E33939 /* Images.xcassets */,
 				EC31FCAF1A9DD93C00E33939 /* Supporting Files */,
-				ECD10E6C1AA087BC007F7CD3 /* test */,
 			);
 			path = iShoppingList;
 			sourceTree = "<group>";
@@ -282,7 +279,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD10E6D1AA087BC007F7CD3 /* test in Resources */,
 				72D1D4F31A9FCB02009E937D /* RestViewController.xib in Resources */,
 				EC31FCC11A9DD93C00E33939 /* Images.xcassets in Resources */,
 				EC31FCB31A9DD93C00E33939 /* InfoPlist.strings in Resources */,

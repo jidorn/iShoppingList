@@ -24,6 +24,12 @@
     // Dispose of any resources that can be recreated.
 }
 
++(Product*)createProduct:(NSString *)tokenUser andIdShoppingList:(NSInteger *)IdShop andNameProduct:(NSString *)name andQuantity:(NSInteger *)quantity andPrice:(double)price{
+    NSString* urlCreateProduct = @"";
+    
+    return nil;
+}
+
 /*
 #pragma mark - Navigation
 
