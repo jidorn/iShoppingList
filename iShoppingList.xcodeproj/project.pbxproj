@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72D1D4F21A9FCB02009E937D /* RestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D1D4F01A9FCB02009E937D /* RestViewController.m */; };
 		72D1D4F31A9FCB02009E937D /* RestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72D1D4F11A9FCB02009E937D /* RestViewController.xib */; };
 		72D1D4F91A9FCD48009E937D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D1D4F81A9FCD48009E937D /* User.m */; };
 		BAD823E51AA0F75000945EB5 /* ProductWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD823E41AA0F75000945EB5 /* ProductWebService.m */; };
@@ -41,8 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		72D1D4EF1A9FCB02009E937D /* RestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestViewController.h; sourceTree = "<group>"; };
-		72D1D4F01A9FCB02009E937D /* RestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestViewController.m; sourceTree = "<group>"; };
 		72D1D4F11A9FCB02009E937D /* RestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestViewController.xib; sourceTree = "<group>"; };
 		72D1D4F71A9FCD48009E937D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		72D1D4F81A9FCD48009E937D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
@@ -152,8 +149,6 @@
 				EC31FCB71A9DD93C00E33939 /* AppDelegate.h */,
 				EC31FCBD1A9DD93C00E33939 /* ViewController.h */,
 				EC31FCBE1A9DD93C00E33939 /* ViewController.m */,
-				72D1D4EF1A9FCB02009E937D /* RestViewController.h */,
-				72D1D4F01A9FCB02009E937D /* RestViewController.m */,
 				72D1D4F11A9FCB02009E937D /* RestViewController.xib */,
 				EC31FCC01A9DD93C00E33939 /* Images.xcassets */,
 				EC31FCAF1A9DD93C00E33939 /* Supporting Files */,
@@ -308,7 +303,6 @@
 				ECD10E741AA0A831007F7CD3 /* UserWebService.m in Sources */,
 				EC31FCB51A9DD93C00E33939 /* main.m in Sources */,
 				EC4790B51AA0B82B00348DA4 /* Product.m in Sources */,
-				72D1D4F21A9FCB02009E937D /* RestViewController.m in Sources */,
 				EC0678B61A9F2FC9008A9A01 /* ShoppingList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
