@@ -105,10 +105,10 @@
 			children = (
 				ECD10E721AA0A831007F7CD3 /* UserWebService.h */,
 				ECD10E731AA0A831007F7CD3 /* UserWebService.m */,
-				BAD823E31AA0F75000945EB5 /* ProductWebService.h */,
-				BAD823E41AA0F75000945EB5 /* ProductWebService.m */,
 				BAD823E61AA0FDC800945EB5 /* ShoppingListWebService.h */,
 				BAD823E71AA0FDC800945EB5 /* ShoppingListWebService.m */,
+				BAD823E31AA0F75000945EB5 /* ProductWebService.h */,
+				BAD823E41AA0F75000945EB5 /* ProductWebService.m */,
 			);
 			name = WebService;
 			sourceTree = "<group>";

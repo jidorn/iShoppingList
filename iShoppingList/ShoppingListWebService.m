@@ -41,10 +41,19 @@
         if ([[jsonDict objectForKey:@"code"] isEqualToString:@"0"]) {
             NSLog(@"La liste de course a été créé avec succès.");
             ShoppingList* list = [ShoppingList new];
-            [list setNameShoppingList:]
+            [list setNameShoppingList:[[jsonDict objectForKey:@"result"] objectForKey:@"name"]];
+        }
+        else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"2"]){
+            NSLog(@"La liste de course existe déja !");
         }
     }
+    return nil;
+}
+
++(NSArray*)ListOfShoppingListWithToken:(NSString *)tokenUser{
     
+    
+    return nil;
 }
 
 /*
