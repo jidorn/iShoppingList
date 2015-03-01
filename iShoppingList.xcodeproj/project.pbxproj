@@ -111,8 +111,7 @@
 				BAD823E41AA0F75000945EB5 /* ProductWebService.m */,
 			);
 			name = WebService;
-			path = iShoppingList;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		EC31FC9C1A9DD93B00E33939 = {
 			isa = PBXGroup;
@@ -202,8 +201,7 @@
 				EC0678B51A9F2FC9008A9A01 /* ShoppingList.m */,
 			);
 			name = Class;
-			path = iShoppingList;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
