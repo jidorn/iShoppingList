@@ -7,12 +7,90 @@
 //
 
 #import "LoginViewController.h"
+#import "HomeViewController.h"
+#import "ShoppingListViewController.h"
+#import "User.h"
 
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
+@synthesize mailTF;
+@synthesize passTF;
+@synthesize labelLogin;
+
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"Login";
+    }
+    return self;
+}
+
+- (IBAction)logButton:(id)sender {
+    NSString * mail = mailTF.text;
+    NSString * pass = passTF.text;
+    
+    NSString* urlLogin = @"http://appspaces.fr/esgi/shopping_list/account/login.php";
+    
+    NSString* urlData = [NSString stringWithFormat:@"?email=%@&password=%@", mail, pass];
+    
+    NSMutableString* urlString = [[NSMutableString alloc] initWithFormat:@"%@%@", urlLogin, urlData];
+    
+    NSURL* url = [NSURL URLWithString:urlString];
+    
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    
+    NSError* error = nil;
+    
+    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:0 error:&error];
+    
+    
+    NSMutableDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    
+    if (!error)
+    {
+        
+        if ([[jsonDict objectForKey:@"code"] isEqualToString:@"0"])
+        {
+            
+            NSLog(@"Connexion établie !");
+            
+            User* user = [User new];
+            [user setToken:[[jsonDict objectForKey:@"result"] objectForKey:@"token"]];
+            [user setLastName:[[jsonDict objectForKey:@"result"] objectForKey:@"lastName"]];
+            [user setEmail:[[jsonDict objectForKey:@"result"] objectForKey:@"email"]];
+            [user setFirstName:[[jsonDict objectForKey:@"result"] objectForKey:@"firstName"]];
+            
+            ShoppingListViewController * shoppingListViewController = [ShoppingListViewController new];
+            [self.navigationController pushViewController:shoppingListViewController animated:YES];
+        }
+        else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"1"])
+        {
+            
+            NSLog(@"Veuillez saisir tous les champs !");
+            labelLogin.text = @"Veuillez saisir tous les champs !";
+            
+        }
+        else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"3"]){
+             NSLog(@"Connexion échoué. vérifiez votre login ou mot de passe.");
+            labelLogin.text = @"Connexion échoué. vérifiez votre login ou mot de passe.";
+        }
+        
+        else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"4"]){
+            NSLog(@"Oups, c'est embarassant. Nous n'avons pas pu vous identifier");
+            labelLogin.text = @"Oups, c'est embarassant. Nous n'avons pas pu vous identifier";
+        }
+        
+        else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"5"]){
+            NSLog(@"Oups, c'est embarassant. Notre serveur connait quelques dysfonctionnement");
+            labelLogin.text = @"Oups, c'est embarassant. Notre serveur connait quelques dysfonctionnement";
+        }
+        
+    }
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,5 +111,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

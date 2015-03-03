@@ -22,11 +22,13 @@
 @synthesize passwordTF;
 @synthesize labelResponse;
 
--(IBAction)cancelButton:(id)sender{
-    HomeViewController * homeViewController = [HomeViewController new];
-    [self.navigationController pushViewController:homeViewController animated:YES];
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"Create User";
+    }
+    return self;
 }
-
 
 - (IBAction)createUser:(id)sender {
     NSString * mail = mailTF.text;
@@ -37,7 +39,7 @@
     
     NSString* urlSubscribe = @"http://appspaces.fr/esgi/shopping_list/account/subscribe.php";
     
-    NSString* urlData = [NSString stringWithFormat:@"?email=%@&password=%@&firstname=%@&lastname=%@", mail, name, firstName, password];
+    NSString* urlData = [NSString stringWithFormat:@"?email=%@&password=%@&firstname=%@&lastname=%@", mail, password, firstName, name];
     
     NSMutableString* urlString = [[NSMutableString alloc] initWithFormat:@"%@%@", urlSubscribe, urlData];
     
@@ -59,7 +61,7 @@
         {
             
             NSLog(@"La session a été crée avec succès.");
-            labelResponse.text = @"La session a été créée avec succès.";
+            labelResponse.text = @"La session a été crée avec succès.";
             
             User* user = [User new];
             [user setToken:[[jsonDict objectForKey:@"result"] objectForKey:@"token"]];

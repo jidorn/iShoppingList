@@ -22,6 +22,5 @@
 
 - (IBAction)createUser:(id)sender;
 
-- (IBAction)cancelButton:(id)sender;
 
 @end

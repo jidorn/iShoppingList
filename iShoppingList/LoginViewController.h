@@ -10,4 +10,12 @@
 
 @interface LoginViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *mailTF;
+
+@property (weak, nonatomic) IBOutlet UITextField *passTF;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelLogin;
+
+- (IBAction)logButton:(id)sender;
+
 @end
