@@ -2,20 +2,20 @@
 //  Product.h
 //  iShoppingList
 //
-//  Created by Etudiant on 27/02/2015.
+//  Created by QUERE Alexandre on 03/03/2015.
 //  Copyright (c) 2015 JD. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface Product : NSObject{
-
+    
 @private
-
-NSInteger* idProduct_;
-NSString* name_;
-NSInteger* quantity_;
-float price_;
+    
+    NSInteger* idProduct_;
+    NSString* name_;
+    NSInteger* quantity_;
+    float price_;
 }
 
 @property (nonatomic) NSInteger* idProduct;
@@ -29,3 +29,4 @@ float price_;
 -(id)initWithIdProduct:(NSInteger*)i name:(NSString*)n quantity:(NSInteger*)q price:(float)p;
 
 @end
+

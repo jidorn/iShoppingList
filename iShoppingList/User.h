@@ -2,15 +2,11 @@
 //  User.h
 //  iShoppingList
 //
-//  Created by etudiant on 25/02/2015.
+//  Created by QUERE Alexandre on 03/03/2015.
 //  Copyright (c) 2015 JD. All rights reserved.
 //
 
-
-
 #import <Foundation/Foundation.h>
-
-
 
 @interface User : NSObject{
     
@@ -38,4 +34,3 @@
 
 
 @end
-

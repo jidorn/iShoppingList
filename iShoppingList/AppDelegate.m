@@ -7,14 +7,15 @@
 //
 
 #import "AppDelegate.h"
-#import "RestViewController.h"
+#import "HomeViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    window.rootViewController = [RestViewController new];
+    HomeViewController * viewController = [HomeViewController new];
+    window.rootViewController = [[UINavigationController alloc]initWithRootViewController:viewController];
     [window makeKeyAndVisible];
     self.window = window;
     // Override point for customization after application launch.

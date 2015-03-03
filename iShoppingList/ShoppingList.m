@@ -2,7 +2,7 @@
 //  ShoppingList.m
 //  iShoppingList
 //
-//  Created by Etudiant on 26/02/2015.
+//  Created by QUERE Alexandre on 03/03/2015.
 //  Copyright (c) 2015 JD. All rights reserved.
 //
 
@@ -26,3 +26,4 @@
 }
 
 @end
+
