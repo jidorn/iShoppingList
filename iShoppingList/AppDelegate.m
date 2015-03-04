@@ -8,31 +8,8 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
-#import "User.h"
 
 @implementation AppDelegate
-@synthesize data_;
-
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
-    NSLog(@"error : %@",error);
-}
-
--(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-    data_ = [NSMutableData new];
-}
-
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-    if (data) {
-        [data_ appendData:data];
-    }
-}
-
--(void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    NSError* error = nil;
-    if (data_) {
-        NSMutableDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data_ options:0 error:&error];
-    }
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -10,14 +10,14 @@
 		BA3684891AA620F200E21FCB /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3684881AA620F200E21FCB /* Launch Screen.xib */; };
 		BA779C971AA66E0700BBEC26 /* CreateShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA779C951AA66E0700BBEC26 /* CreateShoppingListViewController.m */; };
 		BA779C981AA66E0700BBEC26 /* CreateShoppingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA779C961AA66E0700BBEC26 /* CreateShoppingListViewController.xib */; };
+		BAC15CBC1AA7AAA60084B48A /* ShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC15CBA1AA7AAA60084B48A /* ShoppingListViewController.m */; };
+		BAC15CBD1AA7AAA60084B48A /* ShoppingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC15CBB1AA7AAA60084B48A /* ShoppingListViewController.xib */; };
 		BACE53E21AA6411A0096F015 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E01AA6411A0096F015 /* HomeViewController.m */; };
 		BACE53E31AA6411A0096F015 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACE53E11AA6411A0096F015 /* HomeViewController.xib */; };
 		BACE53E71AA641C50096F015 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E51AA641C50096F015 /* CreateViewController.m */; };
 		BACE53E81AA641C50096F015 /* CreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACE53E61AA641C50096F015 /* CreateViewController.xib */; };
 		BACE53EC1AA641E00096F015 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE53EA1AA641E00096F015 /* LoginViewController.m */; };
 		BACE53ED1AA641E00096F015 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACE53EB1AA641E00096F015 /* LoginViewController.xib */; };
-		BAD442491AA65ACA00DD4F86 /* ShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD442471AA65ACA00DD4F86 /* ShoppingListViewController.m */; };
-		BAD4424A1AA65ACA00DD4F86 /* ShoppingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD442481AA65ACA00DD4F86 /* ShoppingListViewController.xib */; };
 		BAD6761C1AA5E44400586AFF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD6761B1AA5E44400586AFF /* User.m */; };
 		BAD6761F1AA5E4FC00586AFF /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD6761E1AA5E4FC00586AFF /* Product.m */; };
 		BAD676221AA5E51200586AFF /* ShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD676211AA5E51200586AFF /* ShoppingList.m */; };
@@ -50,6 +50,9 @@
 		BA779C941AA66E0700BBEC26 /* CreateShoppingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateShoppingListViewController.h; sourceTree = "<group>"; };
 		BA779C951AA66E0700BBEC26 /* CreateShoppingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateShoppingListViewController.m; sourceTree = "<group>"; };
 		BA779C961AA66E0700BBEC26 /* CreateShoppingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateShoppingListViewController.xib; sourceTree = "<group>"; };
+		BAC15CB91AA7AAA60084B48A /* ShoppingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListViewController.h; sourceTree = "<group>"; };
+		BAC15CBA1AA7AAA60084B48A /* ShoppingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListViewController.m; sourceTree = "<group>"; };
+		BAC15CBB1AA7AAA60084B48A /* ShoppingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingListViewController.xib; sourceTree = "<group>"; };
 		BACE53DF1AA6411A0096F015 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		BACE53E01AA6411A0096F015 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		BACE53E11AA6411A0096F015 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -59,9 +62,6 @@
 		BACE53E91AA641E00096F015 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BACE53EA1AA641E00096F015 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BACE53EB1AA641E00096F015 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		BAD442461AA65ACA00DD4F86 /* ShoppingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListViewController.h; sourceTree = "<group>"; };
-		BAD442471AA65ACA00DD4F86 /* ShoppingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListViewController.m; sourceTree = "<group>"; };
-		BAD442481AA65ACA00DD4F86 /* ShoppingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingListViewController.xib; sourceTree = "<group>"; };
 		BAD6761A1AA5E44400586AFF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		BAD6761B1AA5E44400586AFF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		BAD6761D1AA5E4FC00586AFF /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
@@ -119,10 +119,10 @@
 				BACE53E51AA641C50096F015 /* CreateViewController.m */,
 				BACE53E91AA641E00096F015 /* LoginViewController.h */,
 				BACE53EA1AA641E00096F015 /* LoginViewController.m */,
-				BAD442461AA65ACA00DD4F86 /* ShoppingListViewController.h */,
-				BAD442471AA65ACA00DD4F86 /* ShoppingListViewController.m */,
 				BA779C941AA66E0700BBEC26 /* CreateShoppingListViewController.h */,
 				BA779C951AA66E0700BBEC26 /* CreateShoppingListViewController.m */,
+				BAC15CB91AA7AAA60084B48A /* ShoppingListViewController.h */,
+				BAC15CBA1AA7AAA60084B48A /* ShoppingListViewController.m */,
 			);
 			name = Controler;
 			sourceTree = "<group>";
@@ -131,9 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				BACE53E61AA641C50096F015 /* CreateViewController.xib */,
+				BAC15CBB1AA7AAA60084B48A /* ShoppingListViewController.xib */,
 				BACE53EB1AA641E00096F015 /* LoginViewController.xib */,
 				BACE53E11AA6411A0096F015 /* HomeViewController.xib */,
-				BAD442481AA65ACA00DD4F86 /* ShoppingListViewController.xib */,
 				BA779C961AA66E0700BBEC26 /* CreateShoppingListViewController.xib */,
 				BA3684881AA620F200E21FCB /* Launch Screen.xib */,
 			);
@@ -304,12 +304,12 @@
 			files = (
 				EC31FCC11A9DD93C00E33939 /* Images.xcassets in Resources */,
 				BACE53E81AA641C50096F015 /* CreateViewController.xib in Resources */,
+				BAC15CBD1AA7AAA60084B48A /* ShoppingListViewController.xib in Resources */,
 				BACE53ED1AA641E00096F015 /* LoginViewController.xib in Resources */,
 				BA3684891AA620F200E21FCB /* Launch Screen.xib in Resources */,
 				BA779C981AA66E0700BBEC26 /* CreateShoppingListViewController.xib in Resources */,
 				BACE53E31AA6411A0096F015 /* HomeViewController.xib in Resources */,
 				EC31FCB31A9DD93C00E33939 /* InfoPlist.strings in Resources */,
-				BAD4424A1AA65ACA00DD4F86 /* ShoppingListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,12 +330,12 @@
 			files = (
 				BAD6761C1AA5E44400586AFF /* User.m in Sources */,
 				BAD676221AA5E51200586AFF /* ShoppingList.m in Sources */,
+				BAC15CBC1AA7AAA60084B48A /* ShoppingListViewController.m in Sources */,
 				BA779C971AA66E0700BBEC26 /* CreateShoppingListViewController.m in Sources */,
 				BAD6761F1AA5E4FC00586AFF /* Product.m in Sources */,
 				EC31FCB91A9DD93C00E33939 /* AppDelegate.m in Sources */,
 				BACE53E71AA641C50096F015 /* CreateViewController.m in Sources */,
 				BACE53EC1AA641E00096F015 /* LoginViewController.m in Sources */,
-				BAD442491AA65ACA00DD4F86 /* ShoppingListViewController.m in Sources */,
 				BACE53E21AA6411A0096F015 /* HomeViewController.m in Sources */,
 				EC31FCB51A9DD93C00E33939 /* main.m in Sources */,
 			);
