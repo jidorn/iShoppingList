@@ -24,6 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)createButton:(id)sender {
+}
+
 /*
 #pragma mark - Navigation
 
@@ -34,9 +37,4 @@
 }
 */
 
-- (IBAction)homeButton:(id)sender {
-}
-
-- (IBAction)createButton:(id)sender {
-}
 @end

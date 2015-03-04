@@ -8,8 +8,12 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
+#import "User.h"
 
 @implementation AppDelegate
+
+@property User* personne;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

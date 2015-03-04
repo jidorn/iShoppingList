@@ -18,10 +18,8 @@
 
 @property (nonatomic) NSInteger* idShoppingList;
 @property (nonatomic, strong) NSString* nameShoppingList;
-@property (nonatomic, strong) NSDate* date;
-@property (nonatomic) BOOL completed;
 
--(id)initWithIdShoppingList:(NSInteger*)i nameShoppingList:(NSString*)n date:(NSDate*)d completed:(BOOL)c;
+-(id)initWithIdShoppingList:(NSInteger*)i nameShoppingList:(NSString*)n;
 
 @end
 

@@ -12,8 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableSoppingList;
 
-- (IBAction)homeButton:(id)sender;
-
 - (IBAction)createButton:(id)sender;
 
 

@@ -12,16 +12,11 @@
 
 @synthesize idShoppingList = idShoppingList_;
 @synthesize nameShoppingList = nameShoppingList_;
-@synthesize date = date_;
-@synthesize completed = completed_;
 
--(id)initWithIdShoppingList:(NSInteger*)i nameShoppingList:(NSString*)n date:(NSDate*)d completed:(BOOL)c{
+-(id)initWithIdShoppingList:(NSInteger*)i nameShoppingList:(NSString*)n{
     if ((self = [super init])) {
         self.idShoppingList=i;
-        self.nameShoppingList=n;
-        self.date=d;
-        self.completed=c;
-    }
+        self.nameShoppingList=n;    }
     return self;
 }
 
