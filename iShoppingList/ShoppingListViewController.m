@@ -7,15 +7,41 @@
 //
 
 #import "ShoppingListViewController.h"
+#import "CreateShoppingListViewController.h"
 
 @interface ShoppingListViewController ()
 
 @end
 
+static NSString * const cellId = @"SuperUniqueKey";
+
 @implementation ShoppingListViewController
+@synthesize tableShoppingListView;
+@synthesize user = _user;
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil)
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    cell.textLabel.text = [NSString stringWithFormat:@"%lu", indexPath.row];
+    return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"user"]) {
+        CreateShoppingListViewController *createShoppingListViewController = [segue destinationViewController];
+        [createShoppingListViewController setUser:_user];
+    }
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableShoppingListView.delegate = self;
+    self.tableShoppingListView.dataSource = self;
     // Do any additional setup after loading the view from its nib.
 }
 

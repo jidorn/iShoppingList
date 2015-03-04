@@ -9,7 +9,6 @@
 #import "LoginViewController.h"
 #import "HomeViewController.h"
 #import "ShoppingListViewController.h"
-#import "User.h"
 
 @interface LoginViewController ()
 
@@ -19,6 +18,7 @@
 @synthesize mailTF;
 @synthesize passTF;
 @synthesize labelLogin;
+@synthesize user;
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -57,7 +57,7 @@
             
             NSLog(@"Connexion établie !");
             
-            User* user = [User new];
+            
             [user setToken:[[jsonDict objectForKey:@"result"] objectForKey:@"token"]];
             [user setLastName:[[jsonDict objectForKey:@"result"] objectForKey:@"lastName"]];
             [user setEmail:[[jsonDict objectForKey:@"result"] objectForKey:@"email"]];
@@ -80,11 +80,11 @@
         
         else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"4"]){
             NSLog(@"Oups, c'est embarassant. Nous n'avons pas pu vous identifier");
-            labelLogin.text = @"Oups, c'est embarassant. Nous n'avons pas pu vous identifier";
+            labelLogin.text = @"Oups, c'est embarrassant. Nous n'avons pas pu vous identifier";
         }
         
         else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"5"]){
-            NSLog(@"Oups, c'est embarassant. Notre serveur connait quelques dysfonctionnement");
+            NSLog(@"Oups, c'est embarrassant. Notre serveur connait quelques dysfonctionnement");
             labelLogin.text = @"Oups, c'est embarassant. Notre serveur connait quelques dysfonctionnement";
         }
         
@@ -92,9 +92,17 @@
 
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"user"]) {
+        ShoppingListViewController * shoppingListViewController = [segue destinationViewController];
+        [shoppingListViewController setUser:user];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {

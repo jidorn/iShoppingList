@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface LoginViewController : UIViewController
 
@@ -16,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelLogin;
 
-
+@property (strong, nonatomic)User* user;
 
 - (IBAction)logButton:(id)sender;
 

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingListViewController">
             <connections>
+                <outlet property="tableShoppingListView" destination="PRa-hP-4UL" id="hX3-W5-hSj"/>
                 <outlet property="tableSoppingList" destination="PRa-hP-4UL" id="OCf-wo-TOT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,7 +35,7 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="378" y="1"/>
+            <point key="canvasLocation" x="34" y="-96"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

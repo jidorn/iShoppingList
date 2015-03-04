@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, NSURLConnectionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic)NSMutableData * data_;
+
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection;
 
 @end

@@ -30,6 +30,7 @@
     return self;
 }
 
+
 - (IBAction)createUser:(id)sender {
     NSString * mail = mailTF.text;
     NSString * name = nameTF.text;
@@ -68,7 +69,7 @@
             [user setLastName:[[jsonDict objectForKey:@"result"] objectForKey:@"lastName"]];
             [user setEmail:[[jsonDict objectForKey:@"result"] objectForKey:@"email"]];
             [user setFirstName:[[jsonDict objectForKey:@"result"] objectForKey:@"firstName"]];
-            NSLog(@"%@", user.token);
+            NSLog(@"%@ and name %@", user.token, user.lastName);
         }
         else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"2"])
         {
