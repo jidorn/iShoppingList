@@ -20,6 +20,14 @@
 @synthesize shoppingListTF;
 @synthesize user = _user;
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"New List";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -33,11 +41,11 @@
 - (IBAction)createShoppingListButton:(id)sender {
     NSString * list = shoppingListTF.text;
     
-    
     NSString* urlCreate = @"http://appspaces.fr/esgi/shopping_list/shopping_list/create.php";
     
-    NSString* urlData = [NSString stringWithFormat:@"?token=%@&name=%@", _user.token, list];
-    
+    NSString* urlData = [NSString stringWithFormat:@"?token=%@&name=%@", [_user token], list];
+    NSLog(@"token :%@", [_user token]);
+    NSLog(@"list : %@", list);
     NSMutableString* urlString = [[NSMutableString alloc] initWithFormat: @"%@%@", urlCreate,urlData];
     
     //1. NSURL décrire l'url
@@ -62,10 +70,11 @@
     
     if (!error) {
         if ([[jsonDict objectForKey:@"code"] isEqualToString:@"0"]) {
-            labelCreateShoppingList.text = @"La liste de course a été créé avec succès.";
+            
             NSLog(@"La liste de course a été créé avec succès.");
             ShoppingList* list = [ShoppingList new];
             [list setNameShoppingList:[[jsonDict objectForKey:@"result"] objectForKey:@"name"]];
+            labelCreateShoppingList.text = @"La liste de course a été créé avec succès.";
         }
         else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"2"]){
             labelCreateShoppingList.text = @"La liste de course existe déja !";

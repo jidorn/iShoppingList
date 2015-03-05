@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateShoppingListViewController">
             <connections>
-                <outlet property="labelCreateShoppingList" destination="vGJ-kP-zEI" id="Msn-iU-vC7"/>
+                <outlet property="labelCreateShoppingList" destination="vGJ-kP-zEI" id="gX6-kS-fn6"/>
                 <outlet property="shoppingListTF" destination="TdV-XP-IAy" id="DuU-Kj-sGM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,7 +34,7 @@
                         <action selector="createShoppingListButton:" destination="-1" eventType="touchUpInside" id="Irp-yn-7DN"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vGJ-kP-zEI">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vGJ-kP-zEI">
                     <rect key="frame" x="8" y="152" width="304" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -43,7 +43,7 @@
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="433" y="302"/>
+            <point key="canvasLocation" x="63" y="345"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

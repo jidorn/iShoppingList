@@ -19,6 +19,15 @@ static NSString * const cellId = @"SuperUniqueKey";
 @synthesize tableShoppingListView;
 @synthesize user = _user;
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"Liste de course";
+    }
+    return self;
+    NSLog(@"token : %@", _user.token);
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (cell == nil)
@@ -51,6 +60,9 @@ static NSString * const cellId = @"SuperUniqueKey";
 }
 
 - (IBAction)createButton:(id)sender {
+    NSLog(@"token : %@", _user.token);
+    CreateShoppingListViewController *createShoppingList = [CreateShoppingListViewController new];
+    [self.navigationController pushViewController:createShoppingList animated:YES];
 }
 
 /*

@@ -51,20 +51,22 @@
     
     if (!error)
     {
-        
         if ([[jsonDict objectForKey:@"code"] isEqualToString:@"0"])
         {
             
-            NSLog(@"Connexion établie !");
+            NSLog(@"Vous etes enregistré");
             
-            
+            user =[User new];
             [user setToken:[[jsonDict objectForKey:@"result"] objectForKey:@"token"]];
-            [user setLastName:[[jsonDict objectForKey:@"result"] objectForKey:@"lastName"]];
+            [user setFirstName:[[jsonDict objectForKey:@"result"] objectForKey:@"firstname"]];
+            [user setLastName:[[jsonDict objectForKey:@"result"] objectForKey:@"lastname"]];
             [user setEmail:[[jsonDict objectForKey:@"result"] objectForKey:@"email"]];
-            [user setFirstName:[[jsonDict objectForKey:@"result"] objectForKey:@"firstName"]];
+            NSLog(@"name : %@",[user lastName]);
+            NSLog(@"token %@", [user token]);
             
             ShoppingListViewController * shoppingListViewController = [ShoppingListViewController new];
             [self.navigationController pushViewController:shoppingListViewController animated:YES];
+            [self performSegueWithIdentifier:@"user" sender:self];
         }
         else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"1"])
         {
