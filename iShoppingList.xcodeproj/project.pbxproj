@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BA3684891AA620F200E21FCB /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3684881AA620F200E21FCB /* Launch Screen.xib */; };
+		BA6EF8E21AA8B952009005F2 /* ProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6EF8E01AA8B952009005F2 /* ProductListViewController.m */; };
+		BA6EF8E31AA8B952009005F2 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6EF8E11AA8B952009005F2 /* ProductListViewController.xib */; };
+		BA6EF8E71AA8BB9C009005F2 /* CreateProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6EF8E51AA8BB9C009005F2 /* CreateProductViewController.m */; };
+		BA6EF8E81AA8BB9C009005F2 /* CreateProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6EF8E61AA8BB9C009005F2 /* CreateProductViewController.xib */; };
 		BA779C971AA66E0700BBEC26 /* CreateShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA779C951AA66E0700BBEC26 /* CreateShoppingListViewController.m */; };
 		BA779C981AA66E0700BBEC26 /* CreateShoppingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA779C961AA66E0700BBEC26 /* CreateShoppingListViewController.xib */; };
 		BAC15CBC1AA7AAA60084B48A /* ShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC15CBA1AA7AAA60084B48A /* ShoppingListViewController.m */; };
@@ -47,6 +51,12 @@
 
 /* Begin PBXFileReference section */
 		BA3684881AA620F200E21FCB /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		BA6EF8DF1AA8B952009005F2 /* ProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListViewController.h; sourceTree = "<group>"; };
+		BA6EF8E01AA8B952009005F2 /* ProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListViewController.m; sourceTree = "<group>"; };
+		BA6EF8E11AA8B952009005F2 /* ProductListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
+		BA6EF8E41AA8BB9C009005F2 /* CreateProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateProductViewController.h; sourceTree = "<group>"; };
+		BA6EF8E51AA8BB9C009005F2 /* CreateProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateProductViewController.m; sourceTree = "<group>"; };
+		BA6EF8E61AA8BB9C009005F2 /* CreateProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateProductViewController.xib; sourceTree = "<group>"; };
 		BA779C941AA66E0700BBEC26 /* CreateShoppingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateShoppingListViewController.h; sourceTree = "<group>"; };
 		BA779C951AA66E0700BBEC26 /* CreateShoppingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateShoppingListViewController.m; sourceTree = "<group>"; };
 		BA779C961AA66E0700BBEC26 /* CreateShoppingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateShoppingListViewController.xib; sourceTree = "<group>"; };
@@ -123,6 +133,10 @@
 				BA779C951AA66E0700BBEC26 /* CreateShoppingListViewController.m */,
 				BAC15CB91AA7AAA60084B48A /* ShoppingListViewController.h */,
 				BAC15CBA1AA7AAA60084B48A /* ShoppingListViewController.m */,
+				BA6EF8DF1AA8B952009005F2 /* ProductListViewController.h */,
+				BA6EF8E01AA8B952009005F2 /* ProductListViewController.m */,
+				BA6EF8E41AA8BB9C009005F2 /* CreateProductViewController.h */,
+				BA6EF8E51AA8BB9C009005F2 /* CreateProductViewController.m */,
 			);
 			name = Controler;
 			sourceTree = "<group>";
@@ -132,7 +146,9 @@
 			children = (
 				BACE53E61AA641C50096F015 /* CreateViewController.xib */,
 				BAC15CBB1AA7AAA60084B48A /* ShoppingListViewController.xib */,
+				BA6EF8E61AA8BB9C009005F2 /* CreateProductViewController.xib */,
 				BACE53EB1AA641E00096F015 /* LoginViewController.xib */,
+				BA6EF8E11AA8B952009005F2 /* ProductListViewController.xib */,
 				BACE53E11AA6411A0096F015 /* HomeViewController.xib */,
 				BA779C961AA66E0700BBEC26 /* CreateShoppingListViewController.xib */,
 				BA3684881AA620F200E21FCB /* Launch Screen.xib */,
@@ -302,10 +318,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6EF8E81AA8BB9C009005F2 /* CreateProductViewController.xib in Resources */,
 				EC31FCC11A9DD93C00E33939 /* Images.xcassets in Resources */,
 				BACE53E81AA641C50096F015 /* CreateViewController.xib in Resources */,
 				BAC15CBD1AA7AAA60084B48A /* ShoppingListViewController.xib in Resources */,
 				BACE53ED1AA641E00096F015 /* LoginViewController.xib in Resources */,
+				BA6EF8E31AA8B952009005F2 /* ProductListViewController.xib in Resources */,
 				BA3684891AA620F200E21FCB /* Launch Screen.xib in Resources */,
 				BA779C981AA66E0700BBEC26 /* CreateShoppingListViewController.xib in Resources */,
 				BACE53E31AA6411A0096F015 /* HomeViewController.xib in Resources */,
@@ -332,12 +350,14 @@
 				BAD676221AA5E51200586AFF /* ShoppingList.m in Sources */,
 				BAC15CBC1AA7AAA60084B48A /* ShoppingListViewController.m in Sources */,
 				BA779C971AA66E0700BBEC26 /* CreateShoppingListViewController.m in Sources */,
+				BA6EF8E71AA8BB9C009005F2 /* CreateProductViewController.m in Sources */,
 				BAD6761F1AA5E4FC00586AFF /* Product.m in Sources */,
 				EC31FCB91A9DD93C00E33939 /* AppDelegate.m in Sources */,
 				BACE53E71AA641C50096F015 /* CreateViewController.m in Sources */,
 				BACE53EC1AA641E00096F015 /* LoginViewController.m in Sources */,
 				BACE53E21AA6411A0096F015 /* HomeViewController.m in Sources */,
 				EC31FCB51A9DD93C00E33939 /* main.m in Sources */,
+				BA6EF8E21AA8B952009005F2 /* ProductListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,7 @@ static NSString * const cellId = @"SuperUniqueKey";
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Liste de course";
+        self.title = @"Shopping List";
     }
     return self;
     NSLog(@"token : %@", _user.token);

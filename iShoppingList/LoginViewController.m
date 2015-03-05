@@ -44,6 +44,8 @@
     
     NSError* error = nil;
     
+    
+    
     NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:0 error:&error];
     
     
@@ -66,7 +68,7 @@
             
             ShoppingListViewController * shoppingListViewController = [ShoppingListViewController new];
             [self.navigationController pushViewController:shoppingListViewController animated:YES];
-            [self performSegueWithIdentifier:@"user" sender:self];
+            shoppingListViewController.user = user;
         }
         else if ([[jsonDict objectForKey:@"code"] isEqualToString:@"1"])
         {
