@@ -11,17 +11,14 @@
 @interface ShoppingList : NSObject{
 @private
     NSInteger* idShoppingList_;
-    NSString* nameShoppingList_;
     NSDate* date_;
     BOOL completed_;
 }
 
-@property (assign) NSInteger* idShoppingList;
+@property (nonatomic) NSInteger* idShoppingList;
 @property (nonatomic, strong) NSString* nameShoppingList;
 
 -(id)initWithIdShoppingList:(NSInteger*)i nameShoppingList:(NSString*)n;
-
--(id)initWithJSONData:(NSDictionary*)data;
 
 @end
 

@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 JD. All rights reserved.
 //
 
+
 #import "ShoppingListViewController.h"
 #import "CreateShoppingListViewController.h"
 
@@ -34,19 +35,18 @@ static NSString * const cellId = @"SuperUniqueKey";
     NSLog(@"token : %@", _user.token);
 }
 
--(void)setupPlacesFromJSONDict:(NSData*)dataFromServerArray{
+-(void)setupPlacesFromJSONDict:(NSData*)tableListData{
     NSError *error;
     shoppingListArray = [NSMutableArray new];
-    jsonDict = [NSJSONSerialization JSONObjectWithData:dataFromServerArray options:0 error:&error];
-    NSLog(@"json : %@", jsonDict);
+    jsonDict = [NSJSONSerialization JSONObjectWithData:tableListData options:0 error:&error];
     if(error){
         NSLog(@"error parsing the json data from server with error description - %@", [error localizedDescription]);
     }
     else {
-        for(NSDictionary *eachPlace in jsonDict)
-        {
-            shoppingList = [[ShoppingList alloc] initWithJSONData:eachPlace];
-            [shoppingListArray addObject:shoppingList];
+        NSDictionary* objectList = [jsonDict objectForKey:@"result"];
+        for (shoppingList in objectList) {
+            ShoppingList* oneShoppingList = [ShoppingList new];
+            [shoppingListArray addObject:oneShoppingList];
         }
     }
 }
@@ -73,27 +73,26 @@ static NSString * const cellId = @"SuperUniqueKey";
     receiveData = [NSURLConnection sendSynchronousRequest:request returningResponse:0 error:&error];
     
     [self setupPlacesFromJSONDict:receiveData];
-}
+    
+    }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell)
-    {
-        NSLog(@"NEW CELL");
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-    }
-    else
-    {
-        NSLog(@"REUSE CELL");
-    }
     if ([shoppingListArray count]==0) {
         cell.textLabel.text = @"No shopping list has been added";
     }
     else{
-        ShoppingList *shoppingListCurrentPlace = [shoppingListArray objectAtIndex:indexPath.row];
-        cell.textLabel.text = [shoppingListCurrentPlace nameShoppingList];
+            ShoppingList *shoppingListCurrentPlace = [shoppingListArray objectAtIndex:indexPath.row];
+            cell.textLabel.text = [shoppingListCurrentPlace nameShoppingList];
+            NSLog(@"shopping list name : %@", shoppingListCurrentPlace);
+        
     }
+    
     return cell;
+    NSLog(@"cell : %@", cell);
+    
 }
 
 

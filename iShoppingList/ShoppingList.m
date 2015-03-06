@@ -19,14 +19,5 @@
         self.nameShoppingList=n;    }
     return self;
 }
-
--(id)initWithJSONData:(NSDictionary *)data{
-    if (self = [super init]) {
-        self.idShoppingList=[[data objectForKey:@"id"] integerValue];
-        self.nameShoppingList = [data objectForKey:@"name"];
-    }
-    return self;
-}
-
 @end
 
