@@ -16,10 +16,12 @@
     BOOL completed_;
 }
 
-@property (nonatomic) NSInteger* idShoppingList;
+@property (assign) NSInteger* idShoppingList;
 @property (nonatomic, strong) NSString* nameShoppingList;
 
 -(id)initWithIdShoppingList:(NSInteger*)i nameShoppingList:(NSString*)n;
+
+-(id)initWithJSONData:(NSDictionary*)data;
 
 @end
 

@@ -19,6 +19,10 @@ static NSString * const cellId = @"SuperUniqueKey";
 @synthesize tableShoppingListView;
 @synthesize user = _user;
 @synthesize shoppingList;
+@synthesize shoppingListArray;
+@synthesize index;
+@synthesize receiveData;
+@synthesize jsonDict;
 
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -30,12 +34,30 @@ static NSString * const cellId = @"SuperUniqueKey";
     NSLog(@"token : %@", _user.token);
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+-(void)setupPlacesFromJSONDict:(NSData*)dataFromServerArray{
+    NSError *error;
+    shoppingListArray = [NSMutableArray new];
+    jsonDict = [NSJSONSerialization JSONObjectWithData:dataFromServerArray options:0 error:&error];
+    NSLog(@"json : %@", jsonDict);
+    if(error){
+        NSLog(@"error parsing the json data from server with error description - %@", [error localizedDescription]);
+    }
+    else {
+        for(NSDictionary *eachPlace in jsonDict)
+        {
+            shoppingList = [[ShoppingList alloc] initWithJSONData:eachPlace];
+            [shoppingListArray addObject:shoppingList];
+        }
+    }
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [shoppingListArray count];
+}
+
+
+- (IBAction)updateButton:(id)sender {
     
-    //1.
     NSString* urlShoppingList = @"http://appspaces.fr/esgi/shopping_list/shopping_list/list.php";
     
     NSString* urlData = [NSString stringWithFormat:@"?token=%@", _user.token];
@@ -43,37 +65,37 @@ static NSString * const cellId = @"SuperUniqueKey";
     NSMutableString* urlString = [[NSMutableString alloc] initWithFormat:@"%@%@",urlShoppingList, urlData];
     
     NSURL* url = [NSURL URLWithString:urlString];
+    
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     
     NSError* error = nil;
     
-    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:0 error:&error];
+    receiveData = [NSURLConnection sendSynchronousRequest:request returningResponse:0 error:&error];
     
-    NSMutableDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    if (!error) {
-        if ([[jsonDict objectForKey:@"code"] isEqualToString:@"0"]) {
-            
-            NSMutableArray *shoppingListObject = [jsonDict objectForKey:@"result"];
-            NSDictionary *indexList = [shoppingListObject objectAtIndex:cellId];
-            
-            NSLog(@"result : %@", jsonDict);
-            /*
-            NSInteger n = [[indexList objectForKey:@"id"] intValue];
-            shoppingList = [ShoppingList new];
-            [shoppingList setIdShoppingList:<#(NSInteger *)#>]
-            cell.textLabel.text =
-             
-             */
-        }
+    [self setupPlacesFromJSONDict:receiveData];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell)
+    {
+        NSLog(@"NEW CELL");
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    
-    
+    else
+    {
+        NSLog(@"REUSE CELL");
+    }
+    if ([shoppingListArray count]==0) {
+        cell.textLabel.text = @"No shopping list has been added";
+    }
+    else{
+        ShoppingList *shoppingListCurrentPlace = [shoppingListArray objectAtIndex:indexPath.row];
+        cell.textLabel.text = [shoppingListCurrentPlace nameShoppingList];
+    }
     return cell;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

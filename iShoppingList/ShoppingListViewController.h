@@ -13,10 +13,15 @@
 @interface ShoppingListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableShoppingListView;
-@property (strong, nonatomic)User* user;
-@property (strong, nonatomic)ShoppingList* shoppingList;
+@property (strong, nonatomic) User* user;
+@property (strong, nonatomic) ShoppingList* shoppingList;
+@property (strong, nonatomic) NSMutableArray *shoppingListArray;
+@property (nonatomic) NSInteger *index;
+@property (strong, nonatomic) NSData * receiveData;
+@property (strong, nonatomic) NSMutableDictionary * jsonDict;
 
 - (IBAction)createButton:(id)sender;
 
+- (IBAction)updateButton:(id)sender;
 
 @end
