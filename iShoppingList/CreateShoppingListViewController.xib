@@ -43,7 +43,7 @@
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="63" y="345"/>
+            <point key="canvasLocation" x="104" y="341"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

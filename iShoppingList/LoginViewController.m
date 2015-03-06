@@ -44,8 +44,6 @@
     
     NSError* error = nil;
     
-    
-    
     NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:0 error:&error];
     
     
@@ -63,6 +61,7 @@
             [user setFirstName:[[jsonDict objectForKey:@"result"] objectForKey:@"firstname"]];
             [user setLastName:[[jsonDict objectForKey:@"result"] objectForKey:@"lastname"]];
             [user setEmail:[[jsonDict objectForKey:@"result"] objectForKey:@"email"]];
+            NSLog(@"result : %@", jsonDict);
             NSLog(@"name : %@",[user lastName]);
             NSLog(@"token %@", [user token]);
             

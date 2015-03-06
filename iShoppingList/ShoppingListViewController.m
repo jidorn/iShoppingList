@@ -18,6 +18,8 @@ static NSString * const cellId = @"SuperUniqueKey";
 @implementation ShoppingListViewController
 @synthesize tableShoppingListView;
 @synthesize user = _user;
+@synthesize shoppingList;
+
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,15 +34,41 @@ static NSString * const cellId = @"SuperUniqueKey";
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (cell == nil)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-    cell.textLabel.text = [NSString stringWithFormat:@"%lu", indexPath.row];
-    return cell;
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"user"]) {
-        CreateShoppingListViewController *createShoppingListViewController = [segue destinationViewController];
-        [createShoppingListViewController setUser:_user];
+    
+    //1.
+    NSString* urlShoppingList = @"http://appspaces.fr/esgi/shopping_list/shopping_list/list.php";
+    
+    NSString* urlData = [NSString stringWithFormat:@"?token=%@", _user.token];
+    
+    NSMutableString* urlString = [[NSMutableString alloc] initWithFormat:@"%@%@",urlShoppingList, urlData];
+    
+    NSURL* url = [NSURL URLWithString:urlString];
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    
+    NSError* error = nil;
+    
+    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:0 error:&error];
+    
+    NSMutableDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if (!error) {
+        if ([[jsonDict objectForKey:@"code"] isEqualToString:@"0"]) {
+            
+            NSMutableArray *shoppingListObject = [jsonDict objectForKey:@"result"];
+            NSDictionary *indexList = [shoppingListObject objectAtIndex:cellId];
+            
+            NSLog(@"result : %@", jsonDict);
+            /*
+            NSInteger n = [[indexList objectForKey:@"id"] intValue];
+            shoppingList = [ShoppingList new];
+            [shoppingList setIdShoppingList:<#(NSInteger *)#>]
+            cell.textLabel.text =
+             
+             */
+        }
     }
+    
+    
+    return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -63,15 +91,7 @@ static NSString * const cellId = @"SuperUniqueKey";
     NSLog(@"token : %@", _user.token);
     CreateShoppingListViewController *createShoppingList = [CreateShoppingListViewController new];
     [self.navigationController pushViewController:createShoppingList animated:YES];
+    createShoppingList.user=_user;
 }
-
-/*
- #pragma mark - Navigation
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
